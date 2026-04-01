@@ -75,6 +75,7 @@ public class AttendanceController : ControllerBase
 
 
 [HttpGet("ping")]
+[HttpHead("ping")]
 public IActionResult Ping()
 {
     return Ok("alive");
