@@ -73,6 +73,12 @@ public class AttendanceController : ControllerBase
         }));
     }
 
+
+[HttpGet("ping")]
+public IActionResult Ping()
+{
+    return Ok("alive");
+}
     // ✅ UPDATE
     [HttpPut("attendance/{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateAttendanceDto dto)
